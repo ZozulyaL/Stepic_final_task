@@ -9,8 +9,7 @@ class BasketPage(BasePage):
             
     def should_be_basket_url(self):
         assert "basket" in self.browser.current_url, "'basket' not in current url"
-        
-        
+            
     def guest_cant_see_product_in_basket(self):
         assert self.is_not_element_present(*BasketPageLocators.PRODUCT_IN_BASKET), \
             "Product in basket is presented, but should not be"
